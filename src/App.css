@@ -1,38 +1,1186 @@
-.App {
-  text-align: center;
+@font-face {
+	font-family: 'Gugi';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Gugi Regular'), local('Gugi-Regular'),
+		 url('./fonts/gugi-v8-latin/gugi-v8-latin-regular.woff2') format('woff2'),
+		 url('./fonts/gugi-v8-latin/gugi-v8-latin-regular.woff') format('woff');
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+	font-family: 'Noto Sans';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Noto Sans'), local('NotoSans'),
+		 url('./fonts/noto-sans/noto-sans-v9-latin-regular.woff2') format('woff2'),
+		 url('./fonts/noto-sans/noto-sans-v9-latin-regular.woff') format('woff'); 
+}
+  
+@font-face {
+	font-family: 'Noto Sans';
+	font-style: normal;
+	font-weight: 700;
+	src: local('Noto Sans Bold'), local('NotoSans-Bold'),
+		 url('./fonts/noto-sans/noto-sans-v9-latin-700.woff2') format('woff2'), 
+		 url('./fonts/noto-sans/noto-sans-v9-latin-700.woff') format('woff'); 
+}
+  
+h1, h2, h3, h4 {
+	font-family: 'Gugi', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+	font-family: 'Noto Sans', sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+button {
+	font-family: 'Noto Sans', sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+*, *::before, *::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.screen-reader:not(:focus):not(:active) {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.featured p {
+	font-size: 1.25rem;
+}
+
+body, .featured::before, .forecast::before, .wind-compass__bg {
+	background-color: #BFA084;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+body.bg1, body.bg1 .featured::before, body.bg1 .forecast::before, body.bg1 .wind-compass__bg {
+	background-image: url('images/background/plain_vert_400w.jpg');
+}
+
+body.bg2, body.bg2 .featured::before, body.bg2 .forecast::before, body.bg2 .wind-compass__bg {
+	background-image: url('images/background/dune_vert_400w.jpg');
+}
+ 
+body.bg3, body.bg3 .featured::before, body.bg3 .forecast::before, body.bg3 .wind-compass__bg {
+	background-image: url('images/background/mountain_vert_400w.jpg');
+}
+ 
+body.bg4, body.bg4 .featured::before, body.bg4 .forecast::before, body.bg4 .wind-compass__bg {
+	background-image: url('images/background/selfie_vert_400w.jpg');
+}
+ 
+body.bg5, body.bg5 .featured::before, body.bg5 .forecast::before, body.bg5 .wind-compass__bg {
+	background-image: url('images/background/curiosity_selfie_vert_400w.jpg');
+}
+
+body.bg6, body.bg6 .featured::before, body.bg6 .forecast::before, body.bg6 .wind-compass__bg {
+	background-image: url('images/background/mars_tracks_vert_400w.jpg');
+	background-position-y: top;
+}
+
+/* WebP Background Images */
+body.webp.bg1, body.webp.bg1 .featured::before, body.webp.bg1 .forecast::before, body.webp.bg1 .wind-compass__bg {
+	background-image: url('images/background/webp/plain_vert_400w.webp');
+}
+
+body.webp.bg2, body.webp.bg2 .featured::before, body.webp.bg2 .forecast::before, body.webp.bg2 .wind-compass__bg {
+	background-image: url('images/background/webp/dune_vert_400w.webp');
+}
+ 
+body.webp.bg3, body.webp.bg3 .featured::before, body.webp.bg3 .forecast::before, body.webp.bg3 .wind-compass__bg {
+	background-image: url('images/background/webp/mountain_vert_400w.webp');
+}
+ 
+body.webp.bg4, body.webp.bg4 .featured::before, body.webp.bg4 .forecast::before, body.webp.bg4 .wind-compass__bg {
+	background-image: url('images/background/webp/selfie_vert_400w.webp');
+}
+ 
+body.webp.bg5, body.webp.bg5 .featured::before, body.webp.bg5 .forecast::before, body.webp.bg5 .wind-compass__bg {
+	background-image: url('images/background/webp/curiosity_selfie_vert_400w.webp');
+}
+
+body.webp.bg6, body.webp.bg6 .featured::before, body.webp.bg6 .forecast::before, body.webp.bg6 .wind-compass__bg {
+	background-image: url('images/background/webp/mars_tracks_vert_400w.webp');
+}
+
+@media (min-width: 401px) {
+	body.bg1, body.bg1 .featured::before, body.bg1 .forecast::before, body.bg1 .wind-compass__bg {
+		background-image: url('images/background/plain_vert_600w.jpg');
+	}
+	
+	body.bg2, body.bg2 .featured::before, body.bg2 .forecast::before, body.bg2 .wind-compass__bg {
+		background-image: url('images/background/dune_vert_600w.jpg');
+	}
+	 
+	body.bg3, body.bg3 .featured::before, body.bg3 .forecast::before, body.bg3 .wind-compass__bg {
+		background-image: url('images/background/mountain_vert_600w.jpg');
+	}
+	 
+	body.bg4, body.bg4 .featured::before, body.bg4 .forecast::before, body.bg4 .wind-compass__bg {
+		background-image: url('images/background/selfie_vert_600w.jpg');
+	}
+	 
+	body.bg5, body.bg5 .featured::before, body.bg5 .forecast::before, body.bg5 .wind-compass__bg {
+		background-image: url('images/background/curiosity_selfie_vert_600w.jpg');
+	}
+	
+	body.bg6, body.bg6 .featured::before, body.bg6 .forecast::before, body.bg6 .wind-compass__bg {
+		background-image: url('images/background/mars_tracks_vert_600w.jpg');
+	}
+
+/* WebP Background Images */
+	body.webp.bg1, body.webp.bg1 .featured::before, body.webp.bg1 .forecast::before, body.webp.bg1 .wind-compass__bg {
+		background-image: url('images/background/webp/plain_vert_600w.webp');
+	}
+
+	body.webp.bg2, body.webp.bg2 .featured::before, body.webp.bg2 .forecast::before, body.webp.bg2 .wind-compass__bg {
+		background-image: url('images/background/webp/dune_vert_600w.webp');
+	}
+	
+	body.webp.bg3, body.webp.bg3 .featured::before, body.webp.bg3 .forecast::before, body.webp.bg3 .wind-compass__bg {
+		background-image: url('images/background/webp/mountain_vert_600w.webp');
+	}
+	
+	body.webp.bg4, body.webp.bg4 .featured::before, body.webp.bg4 .forecast::before, body.webp.bg4 .wind-compass__bg {
+		background-image: url('images/background/webp/selfie_vert_600w.webp');
+	}
+	
+	body.webp.bg5, body.webp.bg5 .featured::before, body.webp.bg5 .forecast::before, body.webp.bg5 .wind-compass__bg {
+		background-image: url('images/background/webp/curiosity_selfie_vert_600w.webp');
+	}
+
+	body.webp.bg6, body.webp.bg6 .featured::before, body.webp.bg6 .forecast::before, body.webp.bg6 .wind-compass__bg {
+		background-image: url('images/background/webp/mars_tracks_vert_600w.webp');
+	}
+}
+
+@media (min-width: 601px) {
+	body.bg1, body.bg1 .featured::before, body.bg1 .forecast::before, body.bg1 .wind-compass__bg {
+		background-image: url('images/background/plain_vert_800w.jpg');
+	}
+	
+	body.bg2, body.bg2 .featured::before, body.bg2 .forecast::before, body.bg2 .wind-compass__bg {
+		background-image: url('images/background/dune_vert_800w.jpg');
+	}
+	 
+	body.bg3, body.bg3 .featured::before, body.bg3 .forecast::before, body.bg3 .wind-compass__bg {
+		background-image: url('images/background/mountain_vert_800w.jpg');
+	}
+	 
+	body.bg4, body.bg4 .featured::before, body.bg4 .forecast::before, body.bg4 .wind-compass__bg {
+		background-image: url('images/background/selfie_vert_800w.jpg');
+	}
+	 
+	body.bg5, body.bg5 .featured::before, body.bg5 .forecast::before, body.bg5 .wind-compass__bg {
+		background-image: url('images/background/curiosity_selfie_vert_800w.jpg');
+	}
+	
+	body.bg6, body.bg6 .featured::before, body.bg6 .forecast::before, body.bg6 .wind-compass__bg {
+		background-image: url('images/background/mars_tracks_vert_800w.jpg');
+	}
+
+/* WebP Background Images */
+	body.webp.bg1, body.webp.bg1 .featured::before, body.webp.bg1 .forecast::before, body.webp.bg1 .wind-compass__bg {
+		background-image: url('images/background/webp/plain_vert_800w.webp');
+	}
+
+	body.webp.bg2, body.webp.bg2 .featured::before, body.webp.bg2 .forecast::before, body.webp.bg2 .wind-compass__bg {
+		background-image: url('images/background/webp/dune_vert_800w.webp');
+	}
+	
+	body.webp.bg3, body.webp.bg3 .featured::before, body.webp.bg3 .forecast::before, body.webp.bg3 .wind-compass__bg {
+		background-image: url('images/background/webp/mountain_vert_800w.webp');
+	}
+	
+	body.webp.bg4, body.webp.bg4 .featured::before, body.webp.bg4 .forecast::before, body.webp.bg4 .wind-compass__bg {
+		background-image: url('images/background/webp/selfie_vert_800w.webp');
+	}
+	
+	body.webp.bg5, body.webp.bg5 .featured::before, body.webp.bg5 .forecast::before, body.webp.bg5 .wind-compass__bg {
+		background-image: url('images/background/webp/curiosity_selfie_vert_800w.webp');
+	}
+
+	body.webp.bg6, body.webp.bg6 .featured::before, body.webp.bg6 .forecast::before, body.webp.bg6 .wind-compass__bg {
+		background-image: url('images/background/webp/mars_tracks_vert_800w.webp');
+	}
+}
+
+@media (min-width: 801px) {
+	body.bg1, body.bg1 .featured::before, body.bg1 .forecast::before, body.bg1 .wind-compass__bg {
+		background-image: url('images/background/mars_bg.jpg');
+	}
+	
+	body.bg2, body.bg2 .featured::before, body.bg2 .forecast::before, body.bg2 .wind-compass__bg {
+		background-image: url('images/background/dune_vert_1000w.jpg');
+	}
+	 
+	body.bg3, body.bg3 .featured::before, body.bg3 .forecast::before, body.bg3 .wind-compass__bg {
+		background-image: url('images/background/mountain_vert_1080w.jpg');
+	}
+	 
+	body.bg4, body.bg4 .featured::before, body.bg4 .forecast::before, body.bg4 .wind-compass__bg {
+		background-image: url('images/background/selfie_vert_1080w.jpg');
+	}
+	 
+	body.bg5, body.bg5 .featured::before, body.bg5 .forecast::before, body.bg5 .wind-compass__bg {
+		background-image: url('images/background/curiosity_selfie_vert_1080w.jpg');
+	}
+	
+	body.bg6, body.bg6 .featured::before, body.bg6 .forecast::before, body.bg6 .wind-compass__bg {
+		background-image: url('images/background/mars_tracks_vert_1080w.jpg');
+	}
+
+	/* WebP Background Images */
+	body.webp.bg1, body.webp.bg1 .featured::before, body.webp.bg1 .forecast::before, body.webp.bg1 .wind-compass__bg {
+		background-image: url('images/background/webp/rocks.webp');
+	}
+
+	body.webp.bg2, body.webp.bg2 .featured::before, body.webp.bg2 .forecast::before, body.webp.bg2 .wind-compass__bg {
+		background-image: url('images/background/webp/dune_vert_1000w.webp');
+	}
+	
+	body.webp.bg3, body.webp.bg3 .featured::before, body.webp.bg3 .forecast::before, body.webp.bg3 .wind-compass__bg {
+		background-image: url('images/background/webp/mountain_vert_1080w.webp');
+	}
+	
+	body.webp.bg4, body.webp.bg4 .featured::before, body.webp.bg4 .forecast::before, body.webp.bg4 .wind-compass__bg {
+		background-image: url('images/background/webp/selfie_vert_1080w.webp');
+	}
+	
+	body.webp.bg5, body.webp.bg5 .featured::before, body.webp.bg5 .forecast::before, body.webp.bg5 .wind-compass__bg {
+		background-image: url('images/background/webp/curiosity_selfie_vert_1080w.webp');
+	}
+
+	body.webp.bg6, body.webp.bg6 .featured::before, body.webp.bg6 .forecast::before, body.webp.bg6 .wind-compass__bg {
+		background-image: url('images/background/webp/mars_tracks_vert_1080w.webp');
+	}
+}
+
+
+@media (min-width: 961px) {
+	body.bg1, body.bg1 .featured::before, body.bg1 .forecast::before, body.bg1 .wind-compass__bg {
+		background-image: url('images/background/mars_bg.jpg');
+	}
+	
+	body.bg2, body.bg2 .featured::before, body.bg2 .forecast::before, body.bg2 .wind-compass__bg {
+		background-image: url('images/background/dune.jpg');
+	}
+	
+	body.bg3, body.bg3 .featured::before, body.bg3 .forecast::before, body.bg3 .wind-compass__bg {
+		background-image: url('images/background/mountain.jpg');
+	}
+	
+	body.bg4, body.bg4 .featured::before, body.bg4 .forecast::before, body.bg4 .wind-compass__bg {
+		background-image: url('images/background/selfie.jpg');
+	}
+
+	body.bg5, body.bg5 .featured::before, body.bg5 .forecast::before, body.bg5 .wind-compass__bg {
+		background-image: url('images/background/curiosity_selfie.jpg');
+	}
+	
+	body.bg6, body.bg6 .featured::before, body.bg6 .forecast::before, body.bg6 .wind-compass__bg {
+		background-image: url('images/background/mars_tracks.jpg');
+	}
+	
+	/* WebP Background Images */
+	body.webp.bg1, body.webp.bg1 .featured::before, body.webp.bg1 .forecast::before, body.webp.bg1 .wind-compass__bg {
+		background-image: url('images/background/webp/rocks.webp');
+	}
+	
+	body.webp.bg2, body.webp.bg2 .featured::before, body.webp.bg2 .forecast::before, body.webp.bg2 .wind-compass__bg {
+		background-image: url('images/background/webp/dune.webp');
+	}
+	
+	body.webp.bg3, body.webp.bg3 .featured::before, body.webp.bg3 .forecast::before, body.webp.bg3 .wind-compass__bg {
+		background-image: url('images/background/webp/mountain.webp');
+	}
+	
+	body.webp.bg4, body.webp.bg4 .featured::before, body.webp.bg4 .forecast::before, body.webp.bg4 .wind-compass__bg {
+		background-image: url('images/background/webp/selfie.webp');
+	}
+
+	body.webp.bg5, body.webp.bg5 .featured::before, body.webp.bg5 .forecast::before, body.webp.bg5 .wind-compass__bg {
+		background-image: url('images/background/webp/curiosity_selfie.webp');
+	}
+	
+	body.webp.bg6, body.webp.bg6 .featured::before, body.webp.bg6 .forecast::before, body.webp.bg6 .wind-compass__bg {
+		background-image: url('images/background/webp/Mars_tracks.webp');
+	}
+}
+
+
+@supports (backdrop-filter: blur()) {
+	.featured::before, .forecast::before {
+		background: none !important;
+		content: none !important;
+	  }
+
+	.forecast, .featured {
+		backdrop-filter: blur(6px);
+	}
+}
+
+#root {
+	display: grid;
+	grid-template-columns: minmax(0, 1rem) auto minmax(0, 1rem);
+	grid-template-rows: minmax(600px, 100vh);
+	grid-template-areas: ". featured .";
+	justify-items: center;
+	gap: 3rem 0;
+}
+
+.loading {
+	grid-area: featured;
+	max-height: 100%;
+	max-width: 100%;
+	animation: loadingAnim 2000ms linear infinite;
+	fill-opacity: 0.5;
+	fill: white;
+}
+
+@keyframes loadingAnim {
+	0% {
+		transform: rotate3d(1, 1, 0, 0deg);
+	}
+	25% {
+		transform: rotate3d(1, 1, 0, 180deg);
+	}
+	50% {
+		transform: rotate3d(1, 4, 0, 360deg);
+	}
+	75% {
+		transform: rotate3d(1, 4, 0, 540deg);
+	}
+	100% {
+		transform: rotate3d(1, 1, 0, 720deg);
+	}
+}
+
+
+
+.featured {
+	grid-area: featured;
+	display: flex;
+	flex-direction: column;
+	padding: 1em 1.25em;
+	position: relative;
+	border-radius: 20px;
+	/* background-color: rgba(255, 255, 255, 0.3); */
+	align-self: center;
+	align-items: center;
+	height: 90%;
+	width: 100%;
+}
+
+.forecast {
+	grid-area: featured;
+	display: flex;
+	flex-direction: column;
+	padding: 1em;
+	position: relative;
+	align-items: center;
+	/* background-color: rgba(255, 255, 255, 0.3); */
+	border-radius: 20px;
+	height: 90%;
+	align-self: center;
+	width: 100%;
+}
+
+.featured::before, .forecast::before {
+	content: "";
+	filter: blur(6px);
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	z-index: -1;
+	border-radius: 20px;
+}
+
+.featured::after, .forecast::after {
+	content: "";
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	z-index: -1;
+	border-radius: 20px;
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+.featured > * {
+	width: 100%;
+}
+
+.app-header {
+	font-size: 1.25rem;
+	margin-bottom: 0.5em;
+}
+
+.icons {
+	height: 40px;
+	min-height: 40px;
+	justify-self: center;
+	margin-bottom: 0.5em;
+	margin-top: 1em;
+}
+
+.featured__date {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	/* margin-bottom: auto; */
+}
+
+.featured__date h2, .featured__season {
+	font-size: 1.5rem; 
+}
+
+.featured__season {
+	text-transform: capitalize;
+}
+
+.featured__temps {
+	grid-column: 2;
+	grid-row: 2 / span 2;
+	max-width: 350px;
+	justify-self: center;
+	/* margin-bottom: auto; */
+}
+
+.featured__temp {
+	margin-bottom: 0.5em;
+	display: flex;
+	justify-content: space-between;
+}
+
+.featured__wind {
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: center;
+	align-items: center;
+}
+
+.wind-compass__bg {
+	--size: 20vh;
+	--min-size: 110px;
+	--max-size: 160px;
+	clip-path: circle(50% at center);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: var(--size);
+	width: var(--size);
+	min-height: var(--min-size);
+	min-width: var(--min-size);
+	max-height: var(--max-size);
+	max-width: var(--max-size);
+}
+
+.wind-compass__arrow {
+	--degrees: 12deg;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.8);
+	clip-path: polygon(50% 8%, 22% 82%, 50% 58%, 78% 82%);
+	transform-origin: center;
+	transform: rotate(var(--degrees));
+}
+
+.featured__wind-speed {
+	display: flex;
+	justify-content: space-between;
+	max-width: 250px;
+	justify-self: center;
+	width: 100%;
+}
+
+
+
+.forecast-day {
+	display: flex;
+	height: calc(100% / 7);
+	width: 100%;
+	justify-content: space-evenly;
+	align-items: center;
+	transition: 200ms;
+}
+
+.forecast-day__headers {
+	flex: 1 0 35%;
+}
+
+.forecast-day__headers > h3 {
+	font-size: 1.25rem;
+}
+
+.forecast-day__headers> h4 {
+	font-size: 1rem;
+}
+
+.forecast-day__temp {
+	flex: 1 0 35%;
+	display: flex;
+	align-items: center;
+}
+
+.forecast-day__temp > span {
+	font-size: 1.25rem;
+}
+
+.forecast .icons {
+	height: 30px;
+	min-height: 30px;
+	margin: 0;
+	margin-right: 5px;
+}
+
+.forecast-day__btn {
+	flex: 1 0 25%;
+	height: 80%;
+	max-height: 50px;
+	position: relative;
+	box-shadow: none;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	overflow: hidden;
+	background: rgba(255, 255, 255, 1);
+	margin-left: 10px;
+	font-weight: bold;
+}
+
+:root {
+	--btnSize: 64px;
+}
+
+.toggle-btn {
+	position: fixed;
+	bottom: 0.5rem;
+	right: 0.5rem;
+	width: var(--btnSize);
+	height: var(--btnSize);
+	border: none;
+	background-color: white;
+	border-radius: 50%;
+	cursor: pointer;
+	border: 3px solid black;
+}
+
+.toggle-btn svg {
+	height: 40px;
+	width: 40px;
+	transition: 300ms ease;
+}
+
+.toggle-btn.forecast-open svg {
+	transform: rotate(180deg);
+}
+
+.settings {
+	position: fixed;
+	bottom: 0.5rem;
+	left: 0.5rem;
+	z-index: 40;
+}
+
+.settings::after {
+	display: block;
+	content: "";
+	width: var(--btnSize);
+	height: var(--btnSize);
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: -2;
+	background-color: white;
+	transition: 300ms ease;
+}
+
+.settings.open::after {
+	background: radial-gradient(circle, rgba(255,255,255,0) 6px, rgb(255, 255, 255) 6px);
+	transform: scale(5.5, 5.5);
+	transition-timing-function: cubic-bezier(.68, 1.55, .265, 1);
+	border: 1px solid black;
+}
+
+.settings__toggle {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: var(--btnSize);
+	height: var(--btnSize);
+	border-radius: 50%;
+	background-color: white;
+	text-align: center;
+	transition: 200ms ease;
+	cursor: pointer;
+
+	border: 3px solid black;
+}
+
+.settings.open .settings__toggle {
+	border: none;
+}
+
+.settings-icon {
+	height: 40px;
+}
+
+.settings.open .settings__toggle {
+	background-color: transparent;
+	transform: rotate(90deg);
+	color: white;
+}
+
+.settings__menu {
+	padding: 0;
+	margin: 0;
+}
+
+.settings__menuItem {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0.2rem;
+	right: 0.2rem;
+	z-index: -1;
+	background-color: rgba(255,255,255,0.5);
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	text-align: center;
+	transition: transform 300ms ease, background 200ms ease;
+	border: 2px solid rgba(0,0,0,0.5);
+	cursor: pointer;
+}
+
+.settings__menuItem .icon {
+	height: 30px;
+}
+
+.settings__menuItem span {
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.settings__menuItem.wind span {
+	font-size: 1.25rem;
+}
+
+.settings .settings__menuItem .icon {
+	height: 30px;
+}
+
+.settings.open .settings__menuItem {
+	transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.settings.open .settings__menuItem.temp {
+	transform: translate(-16px, -128px);
+}
+
+.settings.open .settings__menuItem.wind {
+	transform: translate(35px, -112px);
+}
+
+.settings.open .settings__menuItem.background {
+	transform: translate(80px, -80px);
+}
+
+.settings.open .settings__menuItem.panels {
+	transform: translate(112px, -35px);
+}
+
+.settings.open .settings__menuItem.info {
+	transform: translate(128px, 16px);
+}
+
+.info-modal {
+	position: absolute;
+	background-color: white;
+	z-index: 10;
+	border-radius: 20px;
+	height: 85vh;
+	width: 50vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 1em 0;
+	max-width: 750px;
+	justify-self: center;
+	width: 95%;
+	height: 82vh;
+	margin-top: 1rem;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 30;
+
+	animation: fadeIn 300ms;
+	transform-origin: left;
+}
+
+.info-modal.out {
+	animation: fadeOut 300ms;
+}
+
+.info__close-btn {
+	position: absolute;
+	top: 0.5rem;
+	right: 1rem;
+	border: none;
+	background: transparent;
+	font-size: 1.5rem;
+	cursor: pointer;
+}
+
+.info__close-icon {
+	width: 1.5rem;
+}
+
+.info__inner {
+	padding: 0 1em;
+	overflow-y: auto;
+}
+
+.info__header {
+	margin-bottom: 0.5em;
+	margin-right: 1.6rem;
+}
+
+.info__header span::before {
+	content: "\A";
+	white-space: pre;
+}
+
+.info__subheader {
+	font-size: 1.375rem;
+	margin-bottom: 0.3em;
+}
+
+.info__p {
+	margin-bottom: 1em;
+	line-height: 1.5;
+}
+
+.error {
+	grid-area: featured;
+	background-color: rgba(255, 255, 255, 0.7);
+	padding: 2em;
+	display: flex;
+	align-items: center;
+	border-radius: 20px;
+	max-height: 200px;
+	font-size: 1.5rem;
+	align-self: center;
+}
+
+@media (max-height: 700px) {
+	.featured, .forecast {
+		margin-bottom: 2rem;
+	}
+}
+
+@media (min-width: 500px) {
+	#root {
+		grid-template-rows: minmax(600px, 100vh);
+	}
+	.app-header {
+		font-size: 1.5rem;
+	}
+
+	.featured__date h2, .featured__season {
+		font-size: 1.75rem;
+	}
+
+	.icons {
+		height: 50px;
+		min-height: 50px;
+	}
+
+	.wind-compass__bg {
+		--min-size: 120px;
+	}
+
+	.forecast-day__headers > h3 {
+		font-size: 1.375rem;
+	}
+	
+	.forecast-day__headers> h4 {
+		font-size: 1.25rem;
+	}
+
+	.forecast .icons {
+		height: 40px;
+		min-height: 40px;
+		margin-right: 20px;
+	}
+
+	.forecast-day__temp > span {
+		font-size: 1.375rem;
+	}
+
+	.forecast-day__btn {
+		font-size: 0.875rem;
+	}
+}
+
+@media (min-width: 550px) {
+	.featured p {
+		font-size: 1.5rem;
+	}
+
+	.info__header span::before {
+		content: none;
+		white-space: initial;
+	}
+}
+
+
+@media (min-width: 700px) {
+	#root {
+		grid-template-columns: minmax(0, 5rem) minmax(650px, 1fr) minmax(0, 5rem);
+		grid-template-rows: 350px 275px;
+		grid-template-rows: calc(55vh - 6em) calc(45vh - 2vh - 2em);
+		grid-template-rows: minmax(370px, calc(45vh - 1.5vh - 1rem)) minmax(250px, calc(40vh - 1.5vh - 1rem));
+		grid-template-rows: 400px 270px;
+		grid-template-areas: ". featured ." ". forecast .";
+		gap: 3vh 0;
+		padding: 2rem 0 0;
+	}
+
+	.featured p {
+		font-size: 1.25rem;
+	}
+
+	.featured {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: min-content min-content min-content auto;
+		gap: 1.5rem;
+		padding: 1.5em;
+		height: 100%;
+		justify-content: space-evenly;
+		align-items: flex-start;
+	}
+
+	.app-header {
+		grid-column: 1 / -1;
+		margin-bottom: -1rem;
+	}
+
+	.featured__date {
+		grid-column: 1 / -1;
+		margin-bottom: 0;
+	}
+
+	.featured__date h2, .featured__season {
+		font-size: 1.5rem;
+	}
+	
+	.icons {
+		grid-row: 3;
+		margin: 0;
+		height: 40px;
+		min-height: 40px;
+	}
+
+	.featured__temps {
+		grid-row: 4;
+		grid-column: 1;
+	}
+
+	.featured__wind {
+		justify-content: flex-start;
+		flex-direction: column;
+	}
+
+	.featured__wind-speed {
+		margin-top: 0.5em;
+	}
+
+	.wind-compass__bg {
+		--min-size: 130px;
+		--max-size: 160px;
+	}
+
+	.wind-compass__arrow {
+		transition: 500ms cubic-bezier(0.36, 0, 0.66, -0.56);
+	}
+
+	.forecast {
+		grid-area: forecast;
+		display: grid;
+		grid-template-columns: repeat(7, 1fr);
+		gap: 0 0.75rem;
+	}
+
+	.forecast-day {
+		height: unset;
+		flex-direction: column;
+		align-items: stretch;
+		justify-content: center;
+		height: 100%;
+	}
+
+	.forecast-day > * {
+		flex: initial;
+	}
+
+	.forecast-day__headers {
+		margin-bottom: 0.75em;
+		flex: 1 0 45px;
+	}
+
+	.forecast-day__headers > h3 {
+		font-size: 1.25rem;
+	}
+	
+	.forecast-day__headers> h4 {
+		font-size: 1rem;
+	}
+
+	.forecast-day__temp {
+		flex-direction: column;
+		margin-bottom: 0.5em;
+		flex: 1 0 60px;
+	}
+
+	.forecast .icons {
+		height: 30px;
+		min-height: 30px;
+		margin-right: 0;
+	}
+
+	.forecast-day__temp > span {
+		font-size: 1.25rem;
+	}
+
+	.forecast-day__btn {
+		height: unset;
+		max-height: unset;
+		flex: 0 1 50px;
+		margin-left: 0;
+	}
+
+	.toggle-btn {
+		display: none;
+	}
+
+	.info-modal {
+		padding: 1.5em 0;
+	}
+
+	.info__inner {
+		padding: 0 1.5em;
+	}
+}
+
+@media (min-width: 961px) {
+	#root {
+		grid-template-rows: minmax(370px, calc(48vh - 1.5vh - 1.5rem)) minmax(300px, calc(42vh - 1.5vh - 1.5rem));
+		grid-template-rows: 430px 330px;
+		padding: 3rem 0 0;
+	}
+
+	.featured {
+		gap: 1rem;
+	}
+
+	.app-header {
+		font-size: 1.875rem;
+		margin-bottom: -0.5rem;
+	}
+
+	.featured p {
+		font-size: 1.375rem;
+	}
+
+	.wind-compass__bg {
+		--size: 25vh;
+		--min-size: 160px;
+		--max-size: 180px
+	}
+
+	.forecast-day__headers > h3 {
+		font-size: 1.5rem;
+	}
+	
+	.forecast-day__headers > h4 {
+		font-size: 1.375rem;
+	}
+
+	.forecast .icons {
+		height: 45px;
+		min-height: 45px;
+		margin-bottom: 10px;
+	}
+
+	.forecast-day__temp > span {
+		font-size: 1.5rem;
+	}
+
+	.forecast-day__btn {
+		font-size: 1rem;
+	}
+
+	.info-modal {
+		margin-top: -1.5rem;
+	}
+}
+
+@media (min-width: 1200px) {
+	#root {
+		grid-template-rows: minmax(390px, calc(48vh - 2vh - 2rem)) minmax(300px, calc(40vh - 2vh - 2rem));
+		grid-template-rows: 450px 350px;
+		padding: 4rem 0 0;
+		gap: 4vh 0;
+	}
+
+	.featured p {
+		font-size: 1.625rem;
+	}
+
+	.featured__date h1, .featured__date h2, .featured__season {
+		font-size: 2rem;
+	} 
+
+	.icons {
+		height: 50px;
+		min-height: 50px;
+	}
+
+	.featured__wind {
+		flex-direction: row-reverse;
+		align-items: flex-start;
+		justify-content: center;
+	}
+
+	.featured__wind-speed {
+		margin-top: 0;
+		margin-right: 1.25em;
+	}
+
+	.wind-compass__bg {
+		--size: 20vh;
+		--min-size: 160px;
+		--max-size: 200px;
+	}
+
+	.settings {
+		bottom: 2rem;
+		left: 1rem;
+	}
+}
+
+@media (min-width: 1500px) {
+	#root {
+		grid-template-columns: minmax(5rem, 1fr) minmax(600px, 1500px) minmax(5rem, 1fr);
+	}
+
+	.wind-compass__bg {
+		--size: 25vh;
+		--min-size: 180px;
+		--max-size: 220px;
+	}
+
+	.featured__wind-speed {
+		margin-right: 2em;
+	}
+}
+
+.forecast {
+	clip-path: circle(100%);
+	transition: 400ms ease-out;
+}
+
+.featured {
+	clip-path: circle(100%);
+	transition: 400ms ease-out;
+}
+
+.forecast.cls-hidden {
+	clip-path: circle(0% at 100% 100%);
+}
+
+.featured.cls-hidden {
+	clip-path: circle(0% at 0% 0%);
+}
+
+/* Stacking two forecast and featured areas on smaller screens, switching with clip-path */
+@media (max-width: 699px) { 
+	.featured {
+		transition: 400ms ease-out;
+	}
+	
+	.forecast.cls-inactive {
+		clip-path: circle(0% at 100% 100%);
+		transition-delay: 0;
+	}
+	
+	.featured.cls-inactive {
+		clip-path: circle(0% at 0% 0%);
+		transition-delay: 0;
+	}
+}
+
+@media (pointer: fine) {
+	.forecast-day__btn {
+		background: rgba(255,255,255,0.3);
+	}
+
+	.forecast-day__btn::before {
+		box-shadow: inset 0 0 0 2px rgb(255, 255, 255);
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		transition: 250ms ease;
+		border-radius: 10px;
+		z-index: -1;
+	}
+
+	.forecast-day__btn:hover::before {
+		box-shadow: inset 0 0 0 30px rgb(255, 255, 255);
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+		transform: scale(0.5) translateX(-50%);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1) translateX(-50%);
+	}
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+		transform: scale(1) translateX(-50%);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(0.5) translateX(-50%);
+	}
 }
