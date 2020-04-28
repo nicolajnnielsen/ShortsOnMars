@@ -90,27 +90,27 @@ body.bg6, body.bg6 .featured::before, body.bg6 .forecast::before, body.bg6 .wind
 }
 
 /* WebP Background Images */
-body.webp.bg1, body.webp.bg1 .featured::before, body.webp.bg1 .forecast::before, body.webp.bg1 .wind-compass__bg {
+.webp body.bg1, .webp body.bg1 .featured::before, .webp body.bg1 .forecast::before, .webp body.bg1 .wind-compass__bg {
 	background-image: url('images/background/webp/plain_vert_400w.webp');
 }
 
-body.webp.bg2, body.webp.bg2 .featured::before, body.webp.bg2 .forecast::before, body.webp.bg2 .wind-compass__bg {
+.webp body.bg2, .webp body.bg2 .featured::before, .webp body.bg2 .forecast::before, .webp body.bg2 .wind-compass__bg {
 	background-image: url('images/background/webp/dune_vert_400w.webp');
 }
  
-body.webp.bg3, body.webp.bg3 .featured::before, body.webp.bg3 .forecast::before, body.webp.bg3 .wind-compass__bg {
+.webp body.bg3, .webp body.bg3 .featured::before, .webp body.bg3 .forecast::before, .webp body.bg3 .wind-compass__bg {
 	background-image: url('images/background/webp/mountain_vert_400w.webp');
 }
  
-body.webp.bg4, body.webp.bg4 .featured::before, body.webp.bg4 .forecast::before, body.webp.bg4 .wind-compass__bg {
+.webp body.bg4, .webp body.bg4 .featured::before, .webp body.bg4 .forecast::before, .webp body.bg4 .wind-compass__bg {
 	background-image: url('images/background/webp/selfie_vert_400w.webp');
 }
  
-body.webp.bg5, body.webp.bg5 .featured::before, body.webp.bg5 .forecast::before, body.webp.bg5 .wind-compass__bg {
+.webp body.bg5, .webp body.bg5 .featured::before, .webp body.bg5 .forecast::before, .webp body.bg5 .wind-compass__bg {
 	background-image: url('images/background/webp/curiosity_selfie_vert_400w.webp');
 }
 
-body.webp.bg6, body.webp.bg6 .featured::before, body.webp.bg6 .forecast::before, body.webp.bg6 .wind-compass__bg {
+.webp body.bg6, .webp body.bg6 .featured::before, .webp body.bg6 .forecast::before, .webp body.bg6 .wind-compass__bg {
 	background-image: url('images/background/webp/mars_tracks_vert_400w.webp');
 }
 
@@ -140,27 +140,27 @@ body.webp.bg6, body.webp.bg6 .featured::before, body.webp.bg6 .forecast::before,
 	}
 
 /* WebP Background Images */
-	body.webp.bg1, body.webp.bg1 .featured::before, body.webp.bg1 .forecast::before, body.webp.bg1 .wind-compass__bg {
+	.webp body.bg1, .webp body.bg1 .featured::before, .webp body.bg1 .forecast::before, .webp body.bg1 .wind-compass__bg {
 		background-image: url('images/background/webp/plain_vert_600w.webp');
 	}
 
-	body.webp.bg2, body.webp.bg2 .featured::before, body.webp.bg2 .forecast::before, body.webp.bg2 .wind-compass__bg {
+	.webp body.bg2, .webp body.bg2 .featured::before, .webp body.bg2 .forecast::before, .webp body.bg2 .wind-compass__bg {
 		background-image: url('images/background/webp/dune_vert_600w.webp');
 	}
 	
-	body.webp.bg3, body.webp.bg3 .featured::before, body.webp.bg3 .forecast::before, body.webp.bg3 .wind-compass__bg {
+	.webp body.bg3, .webp body.bg3 .featured::before, .webp body.bg3 .forecast::before, .webp body.bg3 .wind-compass__bg {
 		background-image: url('images/background/webp/mountain_vert_600w.webp');
 	}
 	
-	body.webp.bg4, body.webp.bg4 .featured::before, body.webp.bg4 .forecast::before, body.webp.bg4 .wind-compass__bg {
+	.webp body.bg4, .webp body.bg4 .featured::before, .webp body.bg4 .forecast::before, .webp body.bg4 .wind-compass__bg {
 		background-image: url('images/background/webp/selfie_vert_600w.webp');
 	}
 	
-	body.webp.bg5, body.webp.bg5 .featured::before, body.webp.bg5 .forecast::before, body.webp.bg5 .wind-compass__bg {
+	.webp body.bg5, .webp body.bg5 .featured::before, .webp body.bg5 .forecast::before, .webp body.bg5 .wind-compass__bg {
 		background-image: url('images/background/webp/curiosity_selfie_vert_600w.webp');
 	}
 
-	body.webp.bg6, body.webp.bg6 .featured::before, body.webp.bg6 .forecast::before, body.webp.bg6 .wind-compass__bg {
+	.webp body.bg6, .webp body.bg6 .featured::before, .webp body.bg6 .forecast::before, .webp body.bg6 .wind-compass__bg {
 		background-image: url('images/background/webp/mars_tracks_vert_600w.webp');
 	}
 }
@@ -191,27 +191,27 @@ body.webp.bg6, body.webp.bg6 .featured::before, body.webp.bg6 .forecast::before,
 	}
 
 /* WebP Background Images */
-	body.webp.bg1, body.webp.bg1 .featured::before, body.webp.bg1 .forecast::before, body.webp.bg1 .wind-compass__bg {
+	.webp body.bg1, .webp body.bg1 .featured::before, .webp body.bg1 .forecast::before, .webp body.bg1 .wind-compass__bg {
 		background-image: url('images/background/webp/plain_vert_800w.webp');
 	}
 
-	body.webp.bg2, body.webp.bg2 .featured::before, body.webp.bg2 .forecast::before, body.webp.bg2 .wind-compass__bg {
+	.webp body.bg2, .webp body.bg2 .featured::before, .webp body.bg2 .forecast::before, .webp body.bg2 .wind-compass__bg {
 		background-image: url('images/background/webp/dune_vert_800w.webp');
 	}
 	
-	body.webp.bg3, body.webp.bg3 .featured::before, body.webp.bg3 .forecast::before, body.webp.bg3 .wind-compass__bg {
+	.webp body.bg3, .webp body.bg3 .featured::before, .webp body.bg3 .forecast::before, .webp body.bg3 .wind-compass__bg {
 		background-image: url('images/background/webp/mountain_vert_800w.webp');
 	}
 	
-	body.webp.bg4, body.webp.bg4 .featured::before, body.webp.bg4 .forecast::before, body.webp.bg4 .wind-compass__bg {
+	.webp body.bg4, .webp body.bg4 .featured::before, .webp body.bg4 .forecast::before, .webp body.bg4 .wind-compass__bg {
 		background-image: url('images/background/webp/selfie_vert_800w.webp');
 	}
 	
-	body.webp.bg5, body.webp.bg5 .featured::before, body.webp.bg5 .forecast::before, body.webp.bg5 .wind-compass__bg {
+	.webp body.bg5, .webp body.bg5 .featured::before, .webp body.bg5 .forecast::before, .webp body.bg5 .wind-compass__bg {
 		background-image: url('images/background/webp/curiosity_selfie_vert_800w.webp');
 	}
 
-	body.webp.bg6, body.webp.bg6 .featured::before, body.webp.bg6 .forecast::before, body.webp.bg6 .wind-compass__bg {
+	.webp body.bg6, .webp body.bg6 .featured::before, .webp body.bg6 .forecast::before, .webp body.bg6 .wind-compass__bg {
 		background-image: url('images/background/webp/mars_tracks_vert_800w.webp');
 	}
 }
@@ -242,27 +242,27 @@ body.webp.bg6, body.webp.bg6 .featured::before, body.webp.bg6 .forecast::before,
 	}
 
 	/* WebP Background Images */
-	body.webp.bg1, body.webp.bg1 .featured::before, body.webp.bg1 .forecast::before, body.webp.bg1 .wind-compass__bg {
+	.webp body.bg1, .webp body.bg1 .featured::before, .webp body.bg1 .forecast::before, .webp body.bg1 .wind-compass__bg {
 		background-image: url('images/background/webp/rocks.webp');
 	}
 
-	body.webp.bg2, body.webp.bg2 .featured::before, body.webp.bg2 .forecast::before, body.webp.bg2 .wind-compass__bg {
+	.webp body.bg2, .webp body.bg2 .featured::before, .webp body.bg2 .forecast::before, .webp body.bg2 .wind-compass__bg {
 		background-image: url('images/background/webp/dune_vert_1000w.webp');
 	}
 	
-	body.webp.bg3, body.webp.bg3 .featured::before, body.webp.bg3 .forecast::before, body.webp.bg3 .wind-compass__bg {
+	.webp body.bg3, .webp body.bg3 .featured::before, .webp body.bg3 .forecast::before, .webp body.bg3 .wind-compass__bg {
 		background-image: url('images/background/webp/mountain_vert_1080w.webp');
 	}
 	
-	body.webp.bg4, body.webp.bg4 .featured::before, body.webp.bg4 .forecast::before, body.webp.bg4 .wind-compass__bg {
+	.webp body.bg4, .webp body.bg4 .featured::before, .webp body.bg4 .forecast::before, .webp body.bg4 .wind-compass__bg {
 		background-image: url('images/background/webp/selfie_vert_1080w.webp');
 	}
 	
-	body.webp.bg5, body.webp.bg5 .featured::before, body.webp.bg5 .forecast::before, body.webp.bg5 .wind-compass__bg {
+	.webp body.bg5, .webp body.bg5 .featured::before, .webp body.bg5 .forecast::before, .webp body.bg5 .wind-compass__bg {
 		background-image: url('images/background/webp/curiosity_selfie_vert_1080w.webp');
 	}
 
-	body.webp.bg6, body.webp.bg6 .featured::before, body.webp.bg6 .forecast::before, body.webp.bg6 .wind-compass__bg {
+	.webp body.bg6, .webp body.bg6 .featured::before, .webp body.bg6 .forecast::before, .webp body.bg6 .wind-compass__bg {
 		background-image: url('images/background/webp/mars_tracks_vert_1080w.webp');
 	}
 }
@@ -294,27 +294,27 @@ body.webp.bg6, body.webp.bg6 .featured::before, body.webp.bg6 .forecast::before,
 	}
 	
 	/* WebP Background Images */
-	body.webp.bg1, body.webp.bg1 .featured::before, body.webp.bg1 .forecast::before, body.webp.bg1 .wind-compass__bg {
+	.webp body.bg1, .webp body.bg1 .featured::before, .webp body.bg1 .forecast::before, .webp body.bg1 .wind-compass__bg {
 		background-image: url('images/background/webp/rocks.webp');
 	}
 	
-	body.webp.bg2, body.webp.bg2 .featured::before, body.webp.bg2 .forecast::before, body.webp.bg2 .wind-compass__bg {
+	.webp body.bg2, .webp body.bg2 .featured::before, .webp body.bg2 .forecast::before, .webp body.bg2 .wind-compass__bg {
 		background-image: url('images/background/webp/dune.webp');
 	}
 	
-	body.webp.bg3, body.webp.bg3 .featured::before, body.webp.bg3 .forecast::before, body.webp.bg3 .wind-compass__bg {
+	.webp body.bg3, .webp body.bg3 .featured::before, .webp body.bg3 .forecast::before, .webp body.bg3 .wind-compass__bg {
 		background-image: url('images/background/webp/mountain.webp');
 	}
 	
-	body.webp.bg4, body.webp.bg4 .featured::before, body.webp.bg4 .forecast::before, body.webp.bg4 .wind-compass__bg {
+	.webp body.bg4, .webp body.bg4 .featured::before, .webp body.bg4 .forecast::before, .webp body.bg4 .wind-compass__bg {
 		background-image: url('images/background/webp/selfie.webp');
 	}
 
-	body.webp.bg5, body.webp.bg5 .featured::before, body.webp.bg5 .forecast::before, body.webp.bg5 .wind-compass__bg {
+	.webp body.bg5, .webp body.bg5 .featured::before, .webp body.bg5 .forecast::before, .webp body.bg5 .wind-compass__bg {
 		background-image: url('images/background/webp/curiosity_selfie.webp');
 	}
 	
-	body.webp.bg6, body.webp.bg6 .featured::before, body.webp.bg6 .forecast::before, body.webp.bg6 .wind-compass__bg {
+	.webp body.bg6, .webp body.bg6 .featured::before, .webp body.bg6 .forecast::before, .webp body.bg6 .wind-compass__bg {
 		background-image: url('images/background/webp/Mars_tracks.webp');
 	}
 }
@@ -342,14 +342,22 @@ body.webp.bg6, body.webp.bg6 .featured::before, body.webp.bg6 .forecast::before,
 
 .loading {
 	grid-area: featured;
-	max-height: 100%;
-	max-width: 100%;
-	animation: loadingAnim 2000ms linear infinite;
-	fill-opacity: 0.5;
-	fill: white;
+	max-height: 200px;
+	max-width: 200px;
+	margin-top: 100px;
+	animation: loadingAnim 6s linear infinite;
 }
 
 @keyframes loadingAnim {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+/* @keyframes loadingAnim {
 	0% {
 		transform: rotate3d(1, 1, 0, 0deg);
 	}
@@ -365,7 +373,7 @@ body.webp.bg6, body.webp.bg6 .featured::before, body.webp.bg6 .forecast::before,
 	100% {
 		transform: rotate3d(1, 1, 0, 720deg);
 	}
-}
+} */
 
 
 
@@ -583,12 +591,21 @@ body.webp.bg6, body.webp.bg6 .featured::before, body.webp.bg6 .forecast::before,
 
 .toggle-btn svg {
 	height: 40px;
-	width: 40px;
-	transition: 300ms ease;
+	width: 35px;
+	transition: 200ms ease;
+	transform-origin: center 22.5px;
+}
+
+.toggle-btn__dots {
+	fill-opacity: 0.5;
 }
 
 .toggle-btn.forecast-open svg {
-	transform: rotate(180deg);
+	transform: rotate(-45deg);
+}
+
+.toggle-btn.feature-open .toggle-btn__singleDot {
+	fill-opacity: 0.5;
 }
 
 .settings {
@@ -990,6 +1007,12 @@ body.webp.bg6, body.webp.bg6 .featured::before, body.webp.bg6 .forecast::before,
 	.info__inner {
 		padding: 0 1.5em;
 	}
+
+	.loading {
+		max-height: 350px;
+	max-width: 350px;
+	margin-top: 0;
+	}
 }
 
 @media (min-width: 961px) {
@@ -1042,6 +1065,11 @@ body.webp.bg6, body.webp.bg6 .featured::before, body.webp.bg6 .forecast::before,
 
 	.info-modal {
 		margin-top: -1.5rem;
+	}
+
+	.loading {
+		max-height: 100%;
+	max-width: 100%;
 	}
 }
 

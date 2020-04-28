@@ -32,7 +32,8 @@ const Info = ({showInfo, closeModal}) => {
 					<p className="info__p">Code and design by Nicolaj N. Nielsen.</p>
 					<p className="info__p">Many thanks to NASA for the API, the background images and all their awesome and important work. You can find the API and many others at <a href="http://https://api.nasa.gov/">https://api.nasa.gov</a>.</p>
 					<p className="info__p">Thanks to <a href="https://www.youtube.com/user/KepowOb">Kevin Powell</a> and <a href="https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw">Web Dev Simplified</a> for the inspiration for the app. Go check out their channels and <a href="https://www.youtube.com/playlist?list=PL4-IK0AVhVjNGp4eiFgbqWOwwVAH27oWF">videos on building a Mars Weather app with HTML, CSS and vanilla JavaScript.</a></p>
-					<p className="info__p">The icons, except the toggle/repat one, are slightly edited versions of Font Awesome. <a href="https://fontawesome.com/license">License</a> </p>
+					<p className="info__p">The icons, with the below exceptions, are slightly edited versions of Font Awesome. <a href="https://fontawesome.com/license">License</a> </p>
+					<p className="info__p">The favicon and loading icon were made using art by <a href="https://www.flaticon.com/authors/good-ware">Good Ware</a> and <a href="https://www.flaticon.com/authors/smashicons">Smashicons</a> from <a href="https://www.flaticon.com/">Flaticon.com</a></p>
 				</div>
 			</article>
 		)
